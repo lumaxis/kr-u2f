@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import * as platform from 'platform';
+import * as platform from '@lumaxis/platform';
 import * as qr from 'qr-image';
 import { crypto_box_easy,
          crypto_box_keypair,
