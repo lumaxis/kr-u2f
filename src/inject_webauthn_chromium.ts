@@ -25,6 +25,7 @@ import { webauthnParse, webauthnStringify } from './krjson';
 
         const credential = webauthnParse(webauthnResponse.responseData.credential);
         credential.getClientExtensionResults = function() { return {}; };
+        credential.isUserVerifyingPlatformAuthenticatorAvailable = function() { return false; };
         credential.__proto__ = window['PublicKeyCredential'].prototype;
         return credential;
     };
